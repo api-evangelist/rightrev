@@ -1,0 +1,47 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://apis.rightrev.com/ documentation (authentication, http-status-codes,
+  getting-started) and https://rightrev.com product pages. RightRev publishes no
+  OpenAPI, so conformance is asserted from documented behavior and the product's
+  accounting-standard claims.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Documented OAuth 2.0 password and implicit flows issued by a per-tenant
+    Keycloak realm (getting-started/authentication.md).
+- id: oidc
+  conforms: true
+  evidence: >-
+    Tokens are issued from Keycloak /protocol/openid-connect/token endpoints and
+    return standard OIDC scopes (profile, email).
+- id: rfc9457
+  conforms: false
+  evidence: Errors are plain JSON with a "message" field; no application/problem+json.
+- id: idempotency
+  conforms: false
+  evidence: No Idempotency-Key header documented for ingestion endpoints.
+- id: pagination
+  conforms: false
+  evidence: List endpoints return count/data_items with no documented cursor/offset paging.
+- id: asc606
+  conforms: true
+  evidence: >-
+    RightRev is purpose-built for ASC 606 revenue recognition compliance
+    (rightrev.com) — a domain/accounting standard, not an API wire standard.
+- id: ifrs15
+  conforms: true
+  evidence: RightRev supports IFRS 15 revenue recognition compliance (rightrev.com).
+- id: graphql
+  conforms: true
+  evidence: Documentation states the platform exposes REST and GraphQL APIs.
+- id: fhir
+  conforms: false
+  evidence: Not a healthcare API.
+- id: scim
+  conforms: false
+  evidence: No SCIM user-provisioning surface documented.
+- id: fapi
+  conforms: false
+  evidence: No FAPI profile claimed; OAuth uses password grant, not FAPI.

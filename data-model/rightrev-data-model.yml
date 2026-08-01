@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Derived from the documented resource surface in the RightRev GitBook
+  (https://apis.rightrev.com/llms.txt and endpoint pages). No OpenAPI is
+  published; entities and relationships are read from the documented API
+  sections (policy sets, transaction ingestion, revenue desk 360, period close).
+docs: https://apis.rightrev.com/rightrev-rest-api.md
+notation: >-
+  relationships use has_one / has_many / belongs_to with the foreign-key /
+  grouping field; direction is from the entity that owns the reference.
+entities:
+- {name: RevenueContract, domain: revenue-desk, description: The central grouping of order/invoice lines under ASC 606 revenue recognition (RC).}
+- {name: RevenueContractLine, domain: revenue-desk, description: An individual order/invoice line within a revenue contract.}
+- {name: Order, domain: ingestion, description: An ingested order transaction (JSON/CSV/API).}
+- {name: Invoice, domain: ingestion, description: An ingested invoice/billing transaction.}
+- {name: Event, domain: ingestion, description: An ingested usage/revenue event, including user-defined events.}
+- {name: RevenueSchedule, domain: revenue-desk, description: The recognized/scheduled revenue timeline for a contract line.}
+- {name: CostSchedule, domain: revenue-desk, description: The cost recognition schedule for a contract line.}
+- {name: PolicySet, domain: configuration, description: A container of SSP and revenue policies plus company profile.}
+- {name: SSPPolicy, domain: configuration, description: Standalone Selling Price rules and allocation methods.}
+- {name: RevenuePolicy, domain: configuration, description: Rules that determine how/when revenue is recognized (revenue rules, holds, amendments, bundles).}
+- {name: LegalEntity, domain: company-profile, description: An accounting entity segregating operations and financial statements.}
+- {name: Currency, domain: company-profile, description: A currency with code, precision and threshold for multi-currency support.}
+- {name: ExchangeRate, domain: company-profile, description: A stored FX rate applied across multi-currency transactions.}
+- {name: AccountingPeriod, domain: period-close, description: An open/closed accounting period controlling transaction processing.}
+- {name: ManualJournal, domain: period-close, description: A manual journal entry posted during close.}
+- {name: ErrorTransaction, domain: platform, description: A remediable or discarded order/invoice/event/MJE rejected by the system.}
+relationships:
+- {from: RevenueContract, to: RevenueContractLine, kind: has_many, via: revenue_contract}
+- {from: RevenueContractLine, to: Order, kind: belongs_to, via: order_financial_id}
+- {from: RevenueContractLine, to: Invoice, kind: belongs_to, via: order_financial_id}
+- {from: RevenueContractLine, to: RevenueSchedule, kind: has_many, via: revenue_contract_line}
+- {from: RevenueContractLine, to: CostSchedule, kind: has_many, via: revenue_contract_line}
+- {from: PolicySet, to: SSPPolicy, kind: has_many, via: policy_set}
+- {from: PolicySet, to: RevenuePolicy, kind: has_many, via: policy_set}
+- {from: RevenueContract, to: PolicySet, kind: belongs_to, via: policy_set}
+- {from: RevenueContract, to: LegalEntity, kind: belongs_to, via: legal_entity}
+- {from: LegalEntity, to: Currency, kind: has_many, via: legal_entity}
+- {from: Order, to: Event, kind: has_many, via: order}
+- {from: AccountingPeriod, to: ManualJournal, kind: has_many, via: accounting_period}
+- {from: ErrorTransaction, to: Order, kind: belongs_to, via: transaction}

@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+format: http-status
+source: >-
+  https://apis.rightrev.com/getting-started/http-status-codes.md — RightRev
+  documents a standard HTTP status-code table. It does NOT use RFC 9457
+  application/problem+json; error responses are JSON with a "message" field
+  (observed in the Revenue Contract Search response envelope).
+docs: https://apis.rightrev.com/getting-started/http-status-codes.md
+envelope:
+  media_type: application/json
+  shape: '{ "message": string, ... }'
+  notes: >-
+    List/search responses return { count, data_items[], message }. A dedicated
+    application/problem+json problem type is not published.
+problems:
+- status: 200
+  title: OK
+  meaning: The request has succeeded.
+- status: 201
+  title: Created
+  meaning: The request has been fulfilled and resulted in a new resource being created.
+- status: 204
+  title: No Content
+  meaning: The server successfully processed the request, but there is no content to return.
+- status: 400
+  title: Bad Request
+  meaning: The request could not be understood by the server due to invalid syntax.
+  remediation: Validate the request payload and query parameters against the endpoint documentation.
+- status: 401
+  title: Unauthorized
+  meaning: The request requires user authentication.
+  remediation: Obtain a fresh OAuth2 bearer token; access tokens expire after 300 seconds.
+- status: 403
+  title: Forbidden
+  meaning: User does not have permission to access the API.
+  remediation: Confirm the tenant/user role grants access to the requested resource.
+- status: 404
+  title: Not Found
+  meaning: The server could not find the requested resource.
+- status: 409
+  title: Conflict
+  meaning: The request could not be completed due to a conflict with the current state.
+- status: 412
+  title: Precondition Failed
+  meaning: The server does not meet one of the preconditions that the requester put on the request.
+- status: 500
+  title: Internal Server Error
+  meaning: The server encountered an unexpected condition which prevented it from fulfilling the request.

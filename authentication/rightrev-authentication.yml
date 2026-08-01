@@ -1,0 +1,54 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://apis.rightrev.com/getting-started/authentication.md,
+  https://apis.rightrev.com/getting-started/use-bearer-token-flow.md,
+  https://apis.rightrev.com/getting-started/using-implicit-or-password-flow.md
+  — RightRev publishes no OpenAPI spec, so this profile is captured from the
+  GitBook developer documentation rather than derived from securitySchemes.
+docs: https://apis.rightrev.com/getting-started/authentication.md
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+description: >-
+  RightRev's REST and GraphQL APIs are protected by OAuth 2.0 / OpenID Connect,
+  issued by a Keycloak identity server per tenant. Clients exchange credentials
+  for a short-lived JWT bearer access token and present it in the Authorization
+  header. Credentials (client_id / client_secret / username / password) are
+  provisioned per tenant during onboarding via a support ticket.
+schemes:
+- name: oauth2Password
+  type: oauth2
+  flow: password
+  tokenUrl: https://auth.rightrev.cloud/auth/realms/<tenant_id>/protocol/openid-connect/token
+  grant_type: password
+  description: >-
+    Resource Owner Password Credentials grant for trusted clients. POST
+    client_id, client_secret, grant_type=password, username and password
+    (application/x-www-form-urlencoded) to the tenant realm token endpoint.
+  scopes:
+  - profile
+  - email
+- name: oauth2Implicit
+  type: oauth2
+  flow: implicit
+  description: >-
+    Implicit flow — the client retrieves an access token via the browser using
+    the client_id, for browser-based / less-trusted clients.
+- name: bearerToken
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: >-
+    The access_token returned by the token endpoint is presented as
+    'Authorization: Bearer <access_token>' on every API request. Access tokens
+    are JWTs that expire after 300 seconds; refresh tokens last 1800 seconds.
+token:
+  token_type: bearer
+  access_token_ttl_seconds: 300
+  refresh_token_ttl_seconds: 1800
+  identity_provider: Keycloak (per-tenant realm)
+provisioning: >-
+  client_id, client_secret and user credentials are issued during tenant
+  onboarding via a RightRev support ticket; there is no self-service key portal.

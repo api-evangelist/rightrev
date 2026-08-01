@@ -1,0 +1,99 @@
+# RightRev API's
+
+## Rightrev API
+
+- [Welcome!](https://apis.rightrev.com/welcome.md)
+- [Getting Started](https://apis.rightrev.com/getting-started.md)
+- [Use Bearer Token Flow](https://apis.rightrev.com/getting-started/use-bearer-token-flow.md)
+- [Using Implicit or Password Flow](https://apis.rightrev.com/getting-started/using-implicit-or-password-flow.md)
+- [Authentication](https://apis.rightrev.com/getting-started/authentication.md)
+- [HTTP Status Codes](https://apis.rightrev.com/getting-started/http-status-codes.md)
+- [API Limit](https://apis.rightrev.com/getting-started/api-limit.md)
+- [RightRev REST API](https://apis.rightrev.com/rightrev-rest-api.md): Welcome to RightRev REST API
+- [Policy Sets](https://apis.rightrev.com/rightrev-rest-api/policy-sets.md)
+- [Configuration](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration.md)
+- [Tenant Configuration](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/tenant-configuration.md): Users can manage various functionalities which are to be active and inactive in specific RightRev tenants based on their business requirements.
+- [SSP Policy](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/ssp-policy.md): Defines rules for Standalone Selling Price calculations and allocation methods. API transactions referencing bundled items rely on this policy for revenue allocation.
+- [SSP policy by upload method](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/ssp-policy/ssp-policy-by-upload-method.md)
+- [SSP policy by formula method](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/ssp-policy/ssp-policy-by-formula-method.md)
+- [SSP policy by calculator method](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/ssp-policy/ssp-policy-by-calculator-method.md)
+- [Revenue Policies](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/revenue-policies.md)
+- [Identify Customer Contract](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/revenue-policies/identify-customer-contract.md): Establishes the logic and rules used to identify or derive a customer contract from incoming API data. This policy ensures consistent contract grouping
+- [Revenue Rules](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/revenue-policies/revenue-rules.md): Defines the conditions and methods used to determine how and when revenue should be recognized. These rules guide the transformation of API inputs into revenue events.
+- [User Defined Events](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/revenue-policies/user-defined-events.md): Allows configuration of custom transaction types or events beyond standard system-defined events. API-triggered events are interpreted based on these definitions.
+- [Holds](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/revenue-policies/holds.md): Define Holds which can be applied to revenue contracts to prevent revenue release or revenue recognition when data discrepancies occur. System holds are pre-defined and triggers automatically.
+- [Contract Amendments](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/revenue-policies/contract-amendments.md): Specifies the rules for processing changes to a contract, including upgrades, downgrades, and modifications triggered by API inputs.
+- [Bundle Configuration](https://apis.rightrev.com/rightrev-rest-api/policy-sets/configuration/revenue-policies/bundle-configuration.md): Determines how bundled products or services are structured and processed. This policy guides allocation and treatment of bundle components when received via APIs.
+- [Company Profile](https://apis.rightrev.com/rightrev-rest-api/policy-sets/company-profile.md)
+- [Accounting Period/Calendar](https://apis.rightrev.com/rightrev-rest-api/policy-sets/company-profile/accounting-period-calendar.md): The Accounting Calendar defines the pattern of the financial year, its start and end dates to perform certain accounting functions.
+- [Legal Entity](https://apis.rightrev.com/rightrev-rest-api/policy-sets/company-profile/legal-entity.md): Legal Entities facilitate segregation of accounting operations, financial statements and close process, and organizations can have multiple Legal entities in the system based on their business needs.
+- [Currencies](https://apis.rightrev.com/rightrev-rest-api/policy-sets/company-profile/currencies.md): Currencies are maintained with their code, name, precision and threshold values to support multi-currency transactions and ensures accurate financial calculations across revenue applications.
+- [Exchange Rates](https://apis.rightrev.com/rightrev-rest-api/policy-sets/exchange-rates.md): Specifies how exchange rates are managed, stored, and applied across multi-currency transactions through API.
+- [Transactions Ingestion](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion.md)
+- [Order Ingestion Configuration](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/order-ingestion-configuration.md): Defines how order-related field data is received, updated, and processed during ingestion through APIs.
+- [Invoice Ingestion Configuration](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/invoice-ingestion-configuration.md): Defines how invoice-related field data is received, updated, and processed during ingestion through APIs.
+- [Transaction Ingestion (Order, Invoices, Events & Bulk Uploads)](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads.md)
+- [Retrieve file data - CSV file](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/retrieve-file-data-csv-file.md): This API is to retrieve the manually uploaded orders/invoices/events/ All Bulk Uploads CSV file data
+- [Retrieve file data - JSON file](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/retrieve-file-data-json-file.md): This API is to retrieve the file data of orders/invoices/events/ All Bulk Uploads in JSON format
+- [Retrieve file data - API calls](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/retrieve-file-data-api-calls.md): This API is to retrieve the file data of orders/invoices/events/ All Bulk Uploads via API.
+- [Retrieve uploaded CSV file](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/retrieve-uploaded-csv-file.md): This API is to retrieve the CSV file of uploaded orders/invoices/events/ All Bulk Uploads
+- [Orders/Invoices/Events Transaction Ingestion via CSV file](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/orders-invoices-events-transaction-ingestion-via-csv-file.md): This API is to upload and collect Orders, Invoices & Events data in CSV file format
+- [Order Ingestion via JSON file](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/order-ingestion-via-json-file.md): This API is to upload and collect Orders data in JSON file format
+- [Invoice Ingestion via JSON file](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/invoice-ingestion-via-json-file.md): This API is to upload and collect Invoice data in JSON file format
+- [Events Ingestion via JSON file](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/events-ingestion-via-json-file.md): This API is to upload and collect Events data in JSON file format
+- [Bulk Upload](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/bulk-upload.md)
+- [Bulk RC Regroup](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/bulk-upload/bulk-rc-regroup.md)
+- [Bulk RC Lines Regroup](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/bulk-upload/bulk-rc-lines-regroup.md)
+- [Bulk Re-allocate](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/bulk-upload/bulk-re-allocate.md)
+- [Bulk GL Account Segment Update](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/bulk-upload/bulk-gl-account-segment-update.md)
+- [Bulk Journal Transfer Hold](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/bulk-upload/bulk-journal-transfer-hold.md)
+- [User Defined Objects (UDO)](https://apis.rightrev.com/rightrev-rest-api/transactions-ingestion/user-defined-objects-udo.md)
+- [Approvals](https://apis.rightrev.com/rightrev-rest-api/approvals.md)
+- [Revenue Desk 360](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360.md)
+- [Revenue Contract Search](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-search.md)
+- [Revenue Contract Details](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-details.md): RC Desk workbench API will provide all revenue contract level details.
+- [Retrieve Revenue Contract Lines](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-details/retrieve-revenue-contract-lines.md): This API is to retrieve all the revenue contract order lines.
+- [Retrieve Revenue Contract Metrics Details](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-details/retrieve-revenue-contract-metrics-details.md): This API is to retrieve all the revenue contract metrics data.
+- [Retrieve Revenue Contract Billings Details](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-details/retrieve-revenue-contract-billings-details.md): This API is to retrieve the billings data of order financial IDs from Revenue Contract .
+- [Retrieve Revenue Contract Revenue Schedules Details](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-details/retrieve-revenue-contract-revenue-schedules-details.md): This API is to retrieve the revenue schedules data of order financial IDs from Revenue Contract.
+- [Retrieve Revenue Contract SSP Details](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-details/retrieve-revenue-contract-ssp-details.md): This API is to retrieve the Standalone Selling Price (SSP) details of order financial IDs from Revenue Contract.
+- [Retrieve Revenue Contract Cost Schedules Details](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-details/retrieve-revenue-contract-cost-schedules-details.md): This API is to retrieve the revenue schedules data of order financial IDs from Revenue Contract.
+- [Revenue Contract - More Actions](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions.md)
+- [Journal Transfer Hold - RC Level](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/journal-transfer-hold-rc-level.md)
+- [Journal Transfer Hold & Event Release Hold - Line Level](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/journal-transfer-hold-and-event-release-hold-line-level.md)
+- [Re-Group](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/re-group.md)
+- [Retrieve Revenue Contract Lines Eligible for Regroup](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/re-group/retrieve-revenue-contract-lines-eligible-for-regroup.md): This API is to retrieve all the revenue contract order lines eligible for regroup to new or existing revenue contract.
+- [Perform Re-Group Action](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/re-group/perform-re-group-action.md)
+- [Re-Allocate](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/re-allocate.md)
+- [Manual Release/Defer](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/manual-release-defer.md)
+- [Retrieve Revenue Contract Lines Eligible for Manual Release](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/manual-release-defer/retrieve-revenue-contract-lines-eligible-for-manual-release.md): This API is to retrieve all the revenue contract order lines eligible for manual release of revenue.
+- [Retrieve Revenue Contract Lines Eligible for Manual Defer](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/manual-release-defer/retrieve-revenue-contract-lines-eligible-for-manual-defer.md): This API is to retrieve all the revenue contract order lines eligible for manual defer of revenue.
+- [Perform Manual Release/Defer](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/manual-release-defer/perform-manual-release-defer.md)
+- [Edit Lines](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/edit-lines.md)
+- [Supporting Documents](https://apis.rightrev.com/rightrev-rest-api/revenue-desk-360/revenue-contract-more-actions/supporting-documents.md)
+- [Platform](https://apis.rightrev.com/rightrev-rest-api/platform.md)
+- [Error Transactions](https://apis.rightrev.com/rightrev-rest-api/platform/error-transactions.md)
+- [Retrieve Error Transactions](https://apis.rightrev.com/rightrev-rest-api/platform/error-transactions/retrieve-error-transactions.md): This API retrieves a filtered list of remediable or discarded error transactions (orders, invoices, events, or MJEs) based on the criteria provided in the request payload.
+- [Reprocess Error Transactions](https://apis.rightrev.com/rightrev-rest-api/platform/error-transactions/reprocess-error-transactions.md): This API Reprocess the Remediable orders/invoices/events transactions rejected by the system due to some exceptions
+- [Outbound App Registry](https://apis.rightrev.com/rightrev-rest-api/platform/outbound-app-registry.md)
+- [Period Close](https://apis.rightrev.com/rightrev-rest-api/period-close.md)
+- [Period Open-Close](https://apis.rightrev.com/rightrev-rest-api/period-close/period-open-close.md): Controls the status of accounting periods (open or closed). API transactions are processed only when the relevant periods are open.
+- [Manual Journals](https://apis.rightrev.com/rightrev-rest-api/period-close/manual-journals.md)
+- [Salesforce APIs](https://apis.rightrev.com/rightrev-rest-api/salesforce-apis.md)
+- [SFDC RC Resync & Resend](https://apis.rightrev.com/rightrev-rest-api/salesforce-apis/sfdc-rc-resync-and-resend.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://apis.rightrev.com/welcome.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

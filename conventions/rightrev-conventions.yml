@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://apis.rightrev.com/getting-started.md,
+  https://apis.rightrev.com/getting-started/authentication.md,
+  https://apis.rightrev.com/getting-started/http-status-codes.md,
+  https://apis.rightrev.com/getting-started/api-limit.md, and endpoint pages
+  such as /rightrev-rest-api/revenue-desk-360/revenue-contract-search.md.
+  Cross-cutting semantics captured from the GitBook docs; no OpenAPI is
+  published so response shapes are quoted from documented endpoints.
+description: >-
+  How RightRev's REST/GraphQL APIs behave across operations: OAuth2/OIDC
+  authentication, JSON payloads, a versioned /apis/<service>/v1 path scheme, a
+  simple { count, data_items, message } list envelope, and standard HTTP status
+  codes. Idempotency keys, cursor pagination and rate-limit headers are not
+  documented (rate limiting is announced as an upcoming release).
+base_url: https://apis.rightrev.com
+api_style: REST (JSON) and GraphQL over HTTPS
+
+authentication:
+  scheme: OAuth 2.0 / OpenID Connect bearer (Keycloak per-tenant realm)
+  header: 'Authorization: Bearer <access_token>'
+  token_ttl_seconds: 300
+  docs: https://apis.rightrev.com/getting-started/authentication.md
+  detail: authentication/rightrev-authentication.yml
+
+idempotency:
+  supported: false
+  notes: No idempotency key/header is documented for RightRev ingestion endpoints.
+
+pagination:
+  style: none-documented
+  notes: >-
+    Search/list endpoints return a "count" and a "data_items" array; a
+    view_cnt parameter caps some result sets (e.g. 50 recent contracts). No
+    cursor/offset pagination parameters are documented.
+
+versioning:
+  style: path
+  pattern: /apis/<service>/v1/<resource>
+  example: GET /apis/rc-search/v1/search
+  notes: The service version is embedded in the path (v1).
+
+error_envelope:
+  media_type: application/json
+  shape: '{ "message": string, ... }'
+  status_codes: errors/rightrev-problem-types.yml
+  rfc9457: false
+
+rate_limiting:
+  documented: false
+  notes: The "API Limit" page states rate limiting "will be included in an upcoming release."
+  lifecycle: lifecycle/rightrev-lifecycle.yml

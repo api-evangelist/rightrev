@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: >-
+  No official RightRev MCP server was found. This is a CANDIDATE tool list
+  derived from the documented REST operations in the RightRev GitBook
+  (https://apis.rightrev.com/llms.txt) — what an MCP server fronting the RightRev
+  API could expose. Not published by RightRev.
+description: >-
+  Candidate Model Context Protocol tool surface mapped from RightRev's documented
+  revenue-recognition REST APIs (transaction ingestion, revenue contract search,
+  period close, error remediation). Grounded in real documented endpoints; tool
+  names are proposed, not official.
+server:
+  name: rightrev
+  transport: http
+  auth: oauth2
+  base_url: https://apis.rightrev.com
+tools:
+- name: ingest_order
+  description: Ingest order transaction data (JSON/CSV) for revenue recognition.
+  source: /rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/order-ingestion-via-json-file.md
+- name: ingest_invoice
+  description: Ingest invoice transaction data for revenue recognition.
+  source: /rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/invoice-ingestion-via-json-file.md
+- name: ingest_event
+  description: Ingest usage/revenue events for recognition.
+  source: /rightrev-rest-api/transactions-ingestion/transaction-ingestion-order-invoices-events-and-bulk-uploads/events-ingestion-via-json-file.md
+- name: search_revenue_contracts
+  description: Search revenue contracts by RC ID, order/invoice number or customer name.
+  source: /rightrev-rest-api/revenue-desk-360/revenue-contract-search.md
+- name: get_revenue_contract_details
+  description: Retrieve full revenue contract detail (lines, metrics, billings, schedules, SSP, cost schedules).
+  source: /rightrev-rest-api/revenue-desk-360/revenue-contract-details.md
+- name: retrieve_error_transactions
+  description: Retrieve remediable or discarded error transactions.
+  source: /rightrev-rest-api/platform/error-transactions/retrieve-error-transactions.md
+- name: reprocess_error_transactions
+  description: Reprocess remediable order/invoice/event transactions rejected by the system.
+  source: /rightrev-rest-api/platform/error-transactions/reprocess-error-transactions.md
+- name: manage_period
+  description: Open or close accounting periods.
+  source: /rightrev-rest-api/period-close/period-open-close.md

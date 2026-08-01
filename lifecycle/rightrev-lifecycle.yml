@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://apis.rightrev.com/ documentation (getting-started, api-limit,
+  authentication). RightRev versions its APIs in the URL path (v1) and issues
+  short-lived OAuth tokens. No public status page, numeric SLA, or RFC 8594
+  Sunset/Deprecation header policy was found.
+versioning:
+  scheme: path
+  mechanism: version segment in the request path (/apis/<service>/v1/...)
+  example: /apis/rc-search/v1/search
+  docs: https://apis.rightrev.com/rightrev-rest-api.md
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No published deprecation policy or Sunset/Deprecation headers were found in the docs.
+token_lifecycle:
+  access_token_ttl_seconds: 300
+  refresh_token_ttl_seconds: 1800
+  notes: OAuth access tokens must be refreshed frequently; see authentication/rightrev-authentication.yml.
+sla:
+  url: null
+  public_uptime_target: null
+  notes: No public SLA or uptime commitment is published.
+status_page: null
+rate_limits:
+  documented: false
+  notes: The API Limit documentation page states rate limiting "will be included in an upcoming release."
+deprecated_operations: []
