@@ -1,16 +1,12 @@
 generated: '2026-07-21'
 method: derived
 status: candidate
-source: >-
-  No official RightRev MCP server was found. This is a CANDIDATE tool list
-  derived from the documented REST operations in the RightRev GitBook
-  (https://apis.rightrev.com/llms.txt) — what an MCP server fronting the RightRev
-  API could expose. Not published by RightRev.
-description: >-
-  Candidate Model Context Protocol tool surface mapped from RightRev's documented
-  revenue-recognition REST APIs (transaction ingestion, revenue contract search,
-  period close, error remediation). Grounded in real documented endpoints; tool
-  names are proposed, not official.
+source: No official RightRev MCP server was found. This is a CANDIDATE tool list derived from the documented
+  REST operations in the RightRev GitBook (https://apis.rightrev.com/llms.txt) — what an MCP server fronting
+  the RightRev API could expose. Not published by RightRev.
+description: Candidate Model Context Protocol tool surface mapped from RightRev's documented revenue-recognition
+  REST APIs (transaction ingestion, revenue contract search, period close, error remediation). Grounded
+  in real documented endpoints; tool names are proposed, not official.
 server:
   name: rightrev
   transport: http
@@ -41,3 +37,9 @@ tools:
 - name: manage_period
   description: Open or close accounting periods.
   source: /rightrev-rest-api/period-close/period-open-close.md
+deployment:
+  mode: none
+  verified: derived
+  tools: 8
+  checked: '2026-08-12'
+  source: catalog MCP census
