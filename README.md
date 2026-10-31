@@ -64,6 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Rightrev is a company surfaced as a portfolio company of norwest-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting the enrichment pipeline.
+RightRev is an AI-powered revenue recognition platform that automates ASC 606 and IFRS 15 compliant accounting for subscription, usage-based, and hybrid revenue models. Its API-first architecture ingests orders, invoices, and usage events, applies configurable Standalone Selling Price (SSP) and revenue policies, and produces revenue contracts, revenue and cost schedules, journal entries, and period-close outputs. RightRev exposes REST and GraphQL APIs secured with OAuth 2.0 / OpenID Connect, alongside a Salesforce-native application and ERP integrations for finance teams.
 
-Backed by: norwest-venture-partners — https://rightrev.com
+**Areas:** Company · Revenue Recognition · Accounting · Finance · Billing · ASC 606 · IFRS 15 · Revenue · SaaS Metrics
+
+## Rightrev on APIs.io
+
+Everything profiled for Rightrev is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/rightrev/](https://apis.io/providers/rightrev/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [RightRev REST API](https://apis.io/apis/rightrev/rightrev-rest-api/) — RightRev's REST (and GraphQL) API for revenue recognition — transaction ingestion (orders, invoices, events, bulk uploads), policy-set and company…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [rightrev](https://apis.io/servers/rightrev/rightrev/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Rightrev Authentication](https://apis.io/security/rightrev/rightrev-authentication/)
+- [Rightrev Domain Security](https://apis.io/security/rightrev/rightrev-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Rightrev Scopes](https://apis.io/scopes/rightrev/rightrev-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://rightrev.com)
+- [Documentation](https://apis.rightrev.com/)
+- [Getting started](https://apis.rightrev.com/getting-started.md)
+- [API reference](https://apis.rightrev.com/rightrev-rest-api.md)
+- [Support](https://www.rightrev.com/contact-us/)
+- [Terms of service](https://www.rightrev.com/terms-of-use/)
+
+## API Evangelist rating
+
+**Kin Score 22.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 10.5 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 30.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/rightrev/](https://apis.io/providers/rightrev/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Rightrev: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/rightrev/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
